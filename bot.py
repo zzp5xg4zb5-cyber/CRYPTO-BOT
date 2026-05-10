@@ -116,8 +116,9 @@ async def price_cmd(update, ctx):
     ]])
     await msg.edit_text(text, parse_mode="Markdown", reply_markup=kb)
 
-async def search_cmd(update, ctx):if not ctx.args:
+async def search_cmd(update, ctx):
     if not ctx.args:
+
         await update.message.reply_text("Пример: `/search doge`", parse_mode="Markdown")
         return
     query = " ".join(ctx.args)
